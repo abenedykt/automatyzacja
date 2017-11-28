@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using System;
+using Xunit;
 
 namespace Automatyzacja2017
 {
@@ -54,6 +55,34 @@ namespace Automatyzacja2017
 
             // assert
             Assert.Equal(5, result);
+        }
+
+        [Fact]
+        public void When_divising_by_zero_divide_throws_cannot_divide_by_zero_exception()
+        {
+            // arrange
+            var math = new Mathematics();
+
+            // act
+            var result = math.Divide(25, 0);
+
+            Assert.True(double.IsInfinity(result));
+
+
+            //Assert.Throws<DivideByZeroException>(() => math.Divide(25, 0));
+        }
+
+        [Fact]
+        public void When_divising_by_zero2_divide_throws_cannot_divide_by_zero_exception()
+        {
+            // arrange
+            var math = new Mathematics();
+
+            // act
+            var result = math.Divide(25, 0);
+            
+            Assert.Throws<DivideByZeroException>(() => math.Divide(25, 0));
+
         }
     }
 }

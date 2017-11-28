@@ -1,4 +1,6 @@
-﻿namespace Automatyzacja2017
+﻿using System;
+
+namespace Automatyzacja2017
 {
     public class Mathematics
     {
@@ -21,5 +23,12 @@
         {
             return x / y;
         }
+
+        public double Divide2(double x, double y)
+        {
+            if (y == 0) throw new DivideByZeroException();
+            return x / y;
+        }
+
     }
 }
