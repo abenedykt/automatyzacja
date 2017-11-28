@@ -18,7 +18,7 @@ namespace Automatyzacja2017
         }
 
         [Fact]
-        public void Method_substract_returns_sum_of_given_values()
+        public void Method_substract_returns_difference_of_given_values()
         {
             // arrange
             var math = new Mathematics();
@@ -31,7 +31,7 @@ namespace Automatyzacja2017
         }
 
         [Fact]
-        public void Method_multiply_returns_sum_of_given_values()
+        public void Method_multiply_returns_multiplication_of_given_values()
         {
             // arrange
             var math = new Mathematics();
@@ -44,7 +44,7 @@ namespace Automatyzacja2017
         }
 
         [Fact]
-        public void Method_divide_returns_sum_of_given_values()
+        public void Method_divide_returns_division_of_given_values()
         {
             // arrange
             var math = new Mathematics();
