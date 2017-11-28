@@ -6,13 +6,15 @@ namespace Automatyzacja2017
     public class MathematicsTests
     {
         [Theory]
-        [InlineData(10, 20, 30)]
+        [InlineData(10.0, 20.0, 30.0)]
         [InlineData(1, 2, 3)]
         [InlineData(-10, 20, 10)]
         [InlineData(-10, 10, 0)]
-        [InlineData(1000000, 1000000, 2000000)]
-        [InlineData(0,0,0)]
-        [InlineData(-0d, 0d, -0d)]
+        [
+            InlineData(1000000, 1000000, 2000000),
+            InlineData(0,0,0),
+            InlineData(-0d, 0d, -0d)
+        ]
         public void Add_method_should_return_sum_of_given_arguments(double x, double y, double expected)
         {
             // arrange
