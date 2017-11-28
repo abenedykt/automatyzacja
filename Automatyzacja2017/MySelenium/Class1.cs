@@ -20,6 +20,8 @@ namespace SeleniumTests
         {
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
+            driver.Manage().Timeouts()
+                .ImplicitWait = TimeSpan.FromMilliseconds(100);
             baseURL = "https://www.google.pl/";
             verificationErrors = new StringBuilder();
         }
@@ -41,7 +43,11 @@ namespace SeleniumTests
 
             driver.FindElement(By.LinkText("Akceptuję")).Click();
 
-            waitForElementPresent(By.LinkText("Poznaj nasze podejście"), 2);
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            wait.Until(ExpectedConditions.InvisibilityOfElementWithText(By.LinkText("Akceptuję"), "Akceptuję"));
+
+
+            WaitForClickable(By.LinkText("Poznaj nasze podejście"), 5);
 
             driver.FindElement(By.LinkText("Poznaj nasze podejście")).Click();
 
@@ -53,10 +59,10 @@ namespace SeleniumTests
             Assert.Single(driver.FindElements(By.TagName("h2"))
                 .Where(tag => tag.Text == "WIEDZA NA PIERWSZYM MIEJSCU"));
 
-            
+
         }
 
-        protected void waitForElementPresent(By by, int seconds)
+        protected void WaitForClickable(By by, int seconds)
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(seconds));
             wait.Until(ExpectedConditions.ElementToBeClickable(by));
