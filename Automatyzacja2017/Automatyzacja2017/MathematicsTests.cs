@@ -5,17 +5,24 @@ namespace Automatyzacja2017
 {
     public class MathematicsTests
     {
-        [Fact]
-        public void Method_add_returns_sum_of_given_values()
+        [Theory]
+        [InlineData(10, 20, 30)]
+        [InlineData(1, 2, 3)]
+        [InlineData(-10, 20, 10)]
+        [InlineData(-10, 10, 0)]
+        [InlineData(1000000, 1000000, 2000000)]
+        [InlineData(0,0,0)]
+        [InlineData(-0d, 0d, -0d)]
+        public void Add_method_should_return_sum_of_given_arguments(double x, double y, double expected)
         {
             // arrange
             var math = new Mathematics();
 
             // act
-            var result = math.Add(10, 20);
+            var result = math.Add(x, y);
 
             // assert
-            Assert.Equal(30, result);
+            Assert.Equal(expected, result);
         }
 
         [Fact]
@@ -67,9 +74,6 @@ namespace Automatyzacja2017
             var result = math.Divide(25, 0);
 
             Assert.True(double.IsInfinity(result));
-
-
-            //Assert.Throws<DivideByZeroException>(() => math.Divide(25, 0));
         }
 
         [Fact]
@@ -78,11 +82,7 @@ namespace Automatyzacja2017
             // arrange
             var math = new Mathematics();
 
-            // act
-            var result = math.Divide(25, 0);
-            
-            Assert.Throws<DivideByZeroException>(() => math.Divide(25, 0));
-
+            Assert.Throws<DivideByZeroException>(() => math.Divide2(25, 0));
         }
     }
 }
