@@ -12,28 +12,29 @@ namespace SeleniumTests
 {
     public class SeleniumExample : IDisposable
     {
+        private const string SearchTextBoxId = "lst-ib";
+        private const string Google = "https://www.google.com";
+        private const string PageTitle = "Code Sprinters -";
+        private const string TextToSearch = "code sprinters";
         private IWebDriver driver;
         private StringBuilder verificationErrors;
-        private string baseURL;
-
+        
         public SeleniumExample()
         {
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts()
                 .ImplicitWait = TimeSpan.FromMilliseconds(100);
-            baseURL = "https://www.google.pl/";
             verificationErrors = new StringBuilder();
         }
 
         [Fact]
         public void NavigatingToCodeSprintersSite()
         {
-            driver.Navigate().GoToUrl(baseURL);
-            driver.FindElement(By.Id("lst-ib")).Clear();
-            driver.FindElement(By.Id("lst-ib")).SendKeys("code sprinters");
-            driver.FindElement(By.Id("lst-ib")).Submit();
-            driver.FindElement(By.LinkText("Code Sprinters -")).Click();
+            GoToGoogle();
+            Search(TextToSearch);
+            GoToSearchResultByPageTitle(PageTitle);
+
 
             var element = driver.FindElement(By.LinkText("Poznaj nasze podejście"));
             Assert.NotNull(element);
@@ -59,6 +60,29 @@ namespace SeleniumTests
                 .Where(tag => tag.Text == "WIEDZA NA PIERWSZYM MIEJSCU"));
 
 
+        }
+
+        private void Search(string query)
+        {
+            var searchBox = GetSearchBox();
+            searchBox.Clear();
+            searchBox.SendKeys(query);
+            searchBox.Submit();
+        }
+
+        private void GoToSearchResultByPageTitle(string title)
+        {
+            driver.FindElement(By.LinkText(title)).Click();
+        }
+
+        private void GoToGoogle()
+        {
+            driver.Navigate().GoToUrl(Google);
+        }
+
+        private IWebElement GetSearchBox()
+        {
+            return driver.FindElement(By.Id(SearchTextBoxId));
         }
 
         protected void WaitForClickable(By by, int seconds)
