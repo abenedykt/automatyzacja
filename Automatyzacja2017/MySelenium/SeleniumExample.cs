@@ -11,13 +11,13 @@ namespace SeleniumTests
 {
     public class SeleniumExample : IDisposable
     {
-        private const string SearchTextBoxId = "lst-ib";
         private const string Google = "https://www.google.com";
+        private const string SearchTextBoxId = "lst-ib";
         private const string PageTitle = "Code Sprinters -";
         private const string TextToSearch = "code sprinters";
-        private const string LinkTextToFind = "Poznaj nasze podejście";
         private const string CookiePolicyAcceptButton = "Akceptuję";
-        private const string OurAproahcText = "Poznaj nasze podejście";
+        private const string OurApproachText = "Poznaj nasze podejście";
+
         private IWebDriver driver;
         private StringBuilder verificationErrors;
 
@@ -37,7 +37,7 @@ namespace SeleniumTests
             Search(TextToSearch);
             GoToSearchResultByPageTitle(PageTitle);
 
-            Assert.Single(GetElementsByLinkText(LinkTextToFind));
+            Assert.Single(GetElementsByLinkText(OurApproachText));
 
             GoToOurApproachPage();
             
@@ -66,7 +66,7 @@ namespace SeleniumTests
 
         private void OpenOurAproachPage()
         {
-            By element = By.LinkText(OurAproahcText);
+            By element = By.LinkText(OurApproachText);
             WaitForClickable(element, 5);
 
             driver.FindElement(element).Click();
