@@ -5,8 +5,7 @@ using OpenQA.Selenium.Support.UI;
 using Xunit;
 using OpenQA.Selenium.Chrome;
 using System.Linq;
-using OpenQA.Selenium.Firefox;
-using System.Threading;
+using System.Collections.ObjectModel;
 
 namespace SeleniumTests
 {
@@ -16,15 +15,18 @@ namespace SeleniumTests
         private const string Google = "https://www.google.com";
         private const string PageTitle = "Code Sprinters -";
         private const string TextToSearch = "code sprinters";
+        private const string LinkTextToFind = "Poznaj nasze podejście";
+        private const string CookiePolicyAcceptButton = "Akceptuję";
+        private const string OurAproahcText = "Poznaj nasze podejście";
         private IWebDriver driver;
         private StringBuilder verificationErrors;
-        
+
         public SeleniumExample()
         {
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts()
-                .ImplicitWait = TimeSpan.FromMilliseconds(100);
+            .ImplicitWait = TimeSpan.FromMilliseconds(100);
             verificationErrors = new StringBuilder();
         }
 
@@ -35,31 +37,44 @@ namespace SeleniumTests
             Search(TextToSearch);
             GoToSearchResultByPageTitle(PageTitle);
 
+            Assert.Single(GetElementsByLinkText(LinkTextToFind));
 
-            var element = driver.FindElement(By.LinkText("Poznaj nasze podejście"));
-            Assert.NotNull(element);
-
-            var elements = driver.FindElements(By.LinkText("Poznaj nasze podejście"));
-            Assert.Single(elements);
-
-            driver.FindElement(By.LinkText("Akceptuję")).Click();
-
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(11));
-            wait.Until(ExpectedConditions.InvisibilityOfElementWithText(By.LinkText("Akceptuję"), "Akceptuję"));
-
-            WaitForClickable(By.LinkText("Poznaj nasze podejście"), 5);
-
-            driver.FindElement(By.LinkText("Poznaj nasze podejście")).Click();
-
+            GoToOurApproachPage();
+            
             // ver 1
             Assert.Contains("WIEDZA NA PIERWSZYM MIEJSCU", driver.PageSource);
 
-
             // ver 2
             Assert.Single(driver.FindElements(By.TagName("h2"))
-                .Where(tag => tag.Text == "WIEDZA NA PIERWSZYM MIEJSCU"));
+            .Where(tag => tag.Text == "WIEDZA NA PIERWSZYM MIEJSCU"));
+        }
 
+        private void GoToOurApproachPage()
+        {
+            AcceptCookiesPolicy();
+            OpenOurAproachPage();
+        }
 
+        private void AcceptCookiesPolicy()
+        {
+            driver.FindElement(By.LinkText(CookiePolicyAcceptButton)).Click();
+
+            const int MaxAnimationTime = 11;
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(MaxAnimationTime));
+            wait.Until(ExpectedConditions.InvisibilityOfElementWithText(By.LinkText(CookiePolicyAcceptButton), CookiePolicyAcceptButton));
+        }
+
+        private void OpenOurAproachPage()
+        {
+            By element = By.LinkText(OurAproahcText);
+            WaitForClickable(element, 5);
+
+            driver.FindElement(element).Click();
+        }
+
+        private ReadOnlyCollection<IWebElement> GetElementsByLinkText(string linkTextToFind)
+        {
+            return driver.FindElements(By.LinkText(linkTextToFind));
         }
 
         private void Search(string query)
@@ -85,18 +100,17 @@ namespace SeleniumTests
             return driver.FindElement(By.Id(SearchTextBoxId));
         }
 
-        protected void WaitForClickable(By by, int seconds)
+        private void WaitForClickable(By by, int seconds)
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(seconds));
             wait.Until(ExpectedConditions.ElementToBeClickable(by));
         }
 
-        protected void waitForElementPresent(IWebElement by, int seconds)
+        private void waitForElementPresent(IWebElement by, int seconds)
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(seconds));
             wait.Until(ExpectedConditions.ElementToBeClickable(by));
         }
-
 
         public void Dispose()
         {
