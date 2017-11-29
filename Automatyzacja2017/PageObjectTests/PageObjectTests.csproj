@@ -64,7 +64,9 @@
   <ItemGroup>
     <Compile Include="AddingBlogCommentsTests.cs" />
     <Compile Include="Browser.cs" />
+    <Compile Include="Comment.cs" />
     <Compile Include="MainPage.cs" />
+    <Compile Include="NotePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

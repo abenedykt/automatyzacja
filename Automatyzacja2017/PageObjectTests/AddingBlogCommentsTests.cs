@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using Xunit;
 
 namespace PageObjectTests
@@ -9,10 +10,13 @@ namespace PageObjectTests
         public void CanAddCommentToTheBlogNote()
         {
             MainPage.Open();
-
-            // wejdz na strone bloga
-            // otworz pierwsza notke
-            // dodaj komentarz
+            MainPage.OpenFirstNote();
+            NotePage.AddComment(new Comment
+            {
+                Text = "Lorem ipsum dolor sit",
+                Mail = "test@test.com",
+                User = "białko"
+            });
             // sprawdz ze komentarz się dodał
         }
 

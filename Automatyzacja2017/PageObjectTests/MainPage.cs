@@ -1,4 +1,6 @@
-﻿namespace PageObjectTests
+﻿using System.Linq;
+
+namespace PageObjectTests
 {
     internal class MainPage
     {
@@ -7,6 +9,12 @@
         internal static void Open()
         {
             Browser.NavigateTo(url);
+        }
+
+        internal static void OpenFirstNote()
+        {
+            var elements = Browser.FindByXpath("//article/header");
+            elements.First().Click();
         }
     }
 }
