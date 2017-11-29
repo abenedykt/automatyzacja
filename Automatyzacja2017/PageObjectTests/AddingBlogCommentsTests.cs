@@ -14,7 +14,7 @@ namespace PageObjectTests
             NotePage.AddComment(new Comment
             {
                 Text = "Lorem ipsum dolor sit",
-                Mail = "test@test.com",
+                Mail = Guid.NewGuid().ToString() +  "@test.com",
                 User = "białko"
             });
             // sprawdz ze komentarz się dodał
