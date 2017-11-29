@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.UnitTests", "Automatyzacj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.SeleniumIntrodution", "MySelenium\2.SeleniumIntrodution.csproj", "{26EF1C60-90E8-4A9D-B98B-645E1CF5C28E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PageObjects", "PageObjects", "{B3D12AFB-4D48-4B83-81F1-D2918EE0FB3E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PageObjects", "PageObjects", "{17A66019-44C5-466C-A5BA-49CB857ADC9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjectTests", "PageObjectTests\PageObjectTests.csproj", "{843B4858-7A43-45CB-B705-0A11F9625A25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,9 +25,16 @@ Global
 		{26EF1C60-90E8-4A9D-B98B-645E1CF5C28E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26EF1C60-90E8-4A9D-B98B-645E1CF5C28E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26EF1C60-90E8-4A9D-B98B-645E1CF5C28E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{843B4858-7A43-45CB-B705-0A11F9625A25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{843B4858-7A43-45CB-B705-0A11F9625A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{843B4858-7A43-45CB-B705-0A11F9625A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{843B4858-7A43-45CB-B705-0A11F9625A25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{843B4858-7A43-45CB-B705-0A11F9625A25} = {17A66019-44C5-466C-A5BA-49CB857ADC9F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {50F19D69-C990-4D9F-8ACB-D11ABC9926D3}
