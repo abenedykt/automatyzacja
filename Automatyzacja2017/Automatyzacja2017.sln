@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Automatyzacja2017", "Automatyzacja2017\Automatyzacja2017.csproj", "{A8B996D5-3C17-4EFE-A7F8-F0C2736E430D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.UnitTests", "Automatyzacja2017\1.UnitTests.csproj", "{A8B996D5-3C17-4EFE-A7F8-F0C2736E430D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySelenium", "MySelenium\MySelenium.csproj", "{26EF1C60-90E8-4A9D-B98B-645E1CF5C28E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.SeleniumIntrodution", "MySelenium\2.SeleniumIntrodution.csproj", "{26EF1C60-90E8-4A9D-B98B-645E1CF5C28E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PageObjects", "PageObjects", "{B3D12AFB-4D48-4B83-81F1-D2918EE0FB3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

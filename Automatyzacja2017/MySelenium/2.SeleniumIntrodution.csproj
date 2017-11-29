@@ -8,8 +8,8 @@
     <ProjectGuid>{26EF1C60-90E8-4A9D-B98B-645E1CF5C28E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MySelenium</RootNamespace>
-    <AssemblyName>MySelenium</AssemblyName>
+    <RootNamespace>SeleniumIntroduction</RootNamespace>
+    <AssemblyName>SeleniumIntroduction</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
