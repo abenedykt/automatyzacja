@@ -43,9 +43,8 @@ namespace SeleniumTests
 
             driver.FindElement(By.LinkText("Akceptuję")).Click();
 
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(11));
             wait.Until(ExpectedConditions.InvisibilityOfElementWithText(By.LinkText("Akceptuję"), "Akceptuję"));
-
 
             WaitForClickable(By.LinkText("Poznaj nasze podejście"), 5);
 
