@@ -1,4 +1,5 @@
-﻿using Ploeh.AutoFixture.Xunit2;
+﻿using PageObjectTests.Framework;
+using Ploeh.AutoFixture.Xunit2;
 using System;
 using Xunit;
 
@@ -6,6 +7,11 @@ namespace PageObjectTests
 {
     public class AddingBlogCommentsTests : IDisposable
     {
+        public AddingBlogCommentsTests()
+        {
+            Browser.Initialize();
+        }
+
         [Theory, AutoData]
         public void CanAddCommentToTheBlogNote(Comment exampleComment)
         {
@@ -15,7 +21,7 @@ namespace PageObjectTests
 
             Assert.True(NotePage.ContainsComment(exampleComment));
         }
-        
+
         public void Dispose()
         {
             Browser.Close();

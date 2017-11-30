@@ -5,7 +5,7 @@ using System.Collections.ObjectModel;
 using OpenQA.Selenium.Support.UI;
 using System.Linq;
 
-namespace PageObjectTests
+namespace PageObjectTests.Framework
 {
     internal class Browser
     {
@@ -14,19 +14,6 @@ namespace PageObjectTests
         internal static IWebElement FindElementById(string id)
         {
             return driver.FindElement(By.Id(id));
-        }
-
-        static Browser()
-        {
-            //            driver = new ChromeDriver();
-            driver = new ChromeDriver();
-            driver.Manage()
-                .Window
-                .Maximize();
-
-            driver.Manage()
-                .Timeouts()
-                .ImplicitWait = TimeSpan.FromSeconds(10);
         }
 
         internal static string PageSource => driver.PageSource;
@@ -55,6 +42,18 @@ namespace PageObjectTests
         internal static void Close()
         {
             driver.Quit();
+        }
+
+        internal static void Initialize()
+        {
+            driver = new ChromeDriver();
+            driver.Manage()
+                .Window
+                .Maximize();
+
+            driver.Manage()
+                .Timeouts()
+                .ImplicitWait = TimeSpan.FromSeconds(10);
         }
     }
 }

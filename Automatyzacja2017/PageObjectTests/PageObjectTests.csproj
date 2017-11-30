@@ -69,11 +69,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddingBlogCommentsTests.cs" />
-    <Compile Include="Browser.cs" />
-    <Compile Include="Comment.cs" />
-    <Compile Include="MainPage.cs" />
-    <Compile Include="NotePage.cs" />
+    <Compile Include="TestFramework\Browser.cs" />
+    <Compile Include="TestFramework\Comment.cs" />
+    <Compile Include="TestFramework\MainPage.cs" />
+    <Compile Include="TestFramework\Note.cs" />
+    <Compile Include="TestFramework\NotePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublishingNewNotesTests.cs" />
     <Compile Include="WordpressProblemTest.cs" />
   </ItemGroup>
   <ItemGroup>

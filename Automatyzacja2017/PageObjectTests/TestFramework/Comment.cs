@@ -1,4 +1,4 @@
-﻿namespace PageObjectTests
+﻿namespace PageObjectTests.Framework
 {
     public class Comment
     {

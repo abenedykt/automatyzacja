@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace PageObjectTests
+namespace PageObjectTests.Framework
 {
     internal class MainPage
     {
