@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using System;
 using System.Threading;
 using Xunit;
 
@@ -14,12 +15,14 @@ namespace PageObjectTests
             NotePage.AddComment(new Comment
             {
                 Text = "Lorem ipsum dolor sit",
-                Mail = Guid.NewGuid().ToString() +  "@test.com",
+                Mail = Guid.NewGuid() +  "@test.com",
                 User = "białko"
             });
             // sprawdz ze komentarz się dodał
         }
 
+
+        
         public void Dispose()
         {
             Browser.Close();

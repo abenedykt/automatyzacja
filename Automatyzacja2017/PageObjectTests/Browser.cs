@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System.Collections.ObjectModel;
+using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 
 namespace PageObjectTests
@@ -17,7 +18,8 @@ namespace PageObjectTests
 
         static Browser()
         {
-            driver = new ChromeDriver();
+            //            driver = new ChromeDriver();
+            driver = new FirefoxDriver();
             driver.Manage()
                 .Window
                 .Maximize();

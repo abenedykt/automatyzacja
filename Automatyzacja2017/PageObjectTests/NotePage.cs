@@ -1,7 +1,4 @@
-﻿using OpenQA.Selenium;
-using System;
-using System.Linq;
-using System.Threading;
+﻿using System.Linq;
 
 namespace PageObjectTests
 {
@@ -24,8 +21,6 @@ namespace PageObjectTests
 
             var name = Browser.FindElementById("author");
             name.SendKeys(testData.User);
-
-            
 
             var submit = Browser.FindElementById("comment-submit");
             submit.Click();
