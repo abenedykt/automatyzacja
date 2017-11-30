@@ -1,24 +1,27 @@
-﻿using OpenQA.Selenium;
+﻿using Ploeh.AutoFixture.Xunit2;
 using System;
-using System.Threading;
 using Xunit;
 
 namespace PageObjectTests
 {
     public class AddingBlogCommentsTests : IDisposable
     {
-        [Fact]
-        public void CanAddCommentToTheBlogNote()
+        [Theory, AutoData]
+        public void CanAddCommentToTheBlogNote(string text, string user)
         {
+
+            var comment = new Comment
+            {
+                Text = text,
+                Mail = Guid.NewGuid() + "@test.com",
+                User = user
+            };
+
             MainPage.Open();
             MainPage.OpenFirstNote();
-            NotePage.AddComment(new Comment
-            {
-                Text = "Lorem ipsum dolor sit",
-                Mail = Guid.NewGuid() +  "@test.com",
-                User = "białko"
-            });
-            // sprawdz ze komentarz się dodał
+            NotePage.AddComment(comment);
+
+            Assert.Contains(comment.Text, Browser.PageSource);
         }
 
 

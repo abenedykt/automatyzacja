@@ -2,7 +2,6 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System.Collections.ObjectModel;
-using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 
 namespace PageObjectTests
@@ -19,14 +18,17 @@ namespace PageObjectTests
         static Browser()
         {
             //            driver = new ChromeDriver();
-            driver = new FirefoxDriver();
+            driver = new ChromeDriver();
             driver.Manage()
                 .Window
                 .Maximize();
+
             driver.Manage()
                 .Timeouts()
-                .ImplicitWait = TimeSpan.FromMilliseconds(500);
+                .ImplicitWait = TimeSpan.FromSeconds(10);
         }
+
+        internal static string PageSource => driver.PageSource;
 
         internal static void WaitForInvisible(By by)
         {
