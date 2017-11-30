@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using PageObjectTests.Framework.Domain;
+using System.Linq;
 
 namespace PageObjectTests.Framework
 {

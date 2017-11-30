@@ -1,4 +1,5 @@
 ﻿using PageObjectTests.Framework;
+using PageObjectTests.Framework.Domain;
 using Ploeh.AutoFixture.Xunit2;
 using System;
 using Xunit;
