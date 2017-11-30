@@ -7,24 +7,14 @@ namespace PageObjectTests
     public class AddingBlogCommentsTests : IDisposable
     {
         [Theory, AutoData]
-        public void CanAddCommentToTheBlogNote(string text, string user)
+        public void CanAddCommentToTheBlogNote(Comment exampleComment)
         {
-
-            var comment = new Comment
-            {
-                Text = text,
-                Mail = Guid.NewGuid() + "@test.com",
-                User = user
-            };
-
             MainPage.Open();
             MainPage.OpenFirstNote();
-            NotePage.AddComment(comment);
+            NotePage.AddComment(exampleComment);
 
-            Assert.Contains(comment.Text, Browser.PageSource);
+            Assert.True(NotePage.ContainsComment(exampleComment));
         }
-
-
         
         public void Dispose()
         {

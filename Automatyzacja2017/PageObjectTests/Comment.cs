@@ -1,6 +1,6 @@
 ﻿namespace PageObjectTests
 {
-    internal class Comment
+    public class Comment
     {
         public string Text { get; set; }
         public string Mail { get; set; }

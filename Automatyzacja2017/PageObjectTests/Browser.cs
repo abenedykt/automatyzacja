@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System.Collections.ObjectModel;
 using OpenQA.Selenium.Support.UI;
+using System.Linq;
 
 namespace PageObjectTests
 {
@@ -44,6 +45,11 @@ namespace PageObjectTests
         internal static void NavigateTo(string url)
         {
             driver.Navigate().GoToUrl(url);
+        }
+
+        internal static bool PageContains(string text)
+        {
+            return driver.FindElements(By.XPath($"//*[contains(text(), '{text}')]")).Any();
         }
 
         internal static void Close()
