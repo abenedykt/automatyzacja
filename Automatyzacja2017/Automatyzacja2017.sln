@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.SeleniumIntrodution", "My
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PageObjects", "PageObjects", "{17A66019-44C5-466C-A5BA-49CB857ADC9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjectTests", "PageObjectTests\PageObjectTests.csproj", "{843B4858-7A43-45CB-B705-0A11F9625A25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.PageObjectTests", "PageObjectTests\1.PageObjectTests.csproj", "{843B4858-7A43-45CB-B705-0A11F9625A25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

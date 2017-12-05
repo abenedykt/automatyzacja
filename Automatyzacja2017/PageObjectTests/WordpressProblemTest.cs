@@ -23,19 +23,6 @@ namespace PageObjectTests
             
             var mail = driver.FindElementById("email");
 
-            //var mail2 = driver.FindElementsById("email").First();
-
-            //mail i mail2 dostają takie samo GetHashCode
-            // jesli usune na stronie elemnt i jeszcze 
-            // raz sprawdze czy istnieje to selenium juz nie 
-            // znajduje tego - wniosek, sprawdza za kazdym razem
-            // nie cache-uje - zresztą nie ma cachea w źródłach
-            // jedyny cache w źródłach selenium jest na 
-            // atrybut - któego tutaj nie uzywamy 
-
-            // wniosek - nieprawidłowe zachowanie strony
-            // wordpress.com zmienił temat lub coś w bebechach ich word pressa
-
             mail.Click();
             mail.SendKeys(Guid.NewGuid() +  "@onet.pl");
 
@@ -63,13 +50,6 @@ namespace PageObjectTests
             var mail = driver.FindElementById("email");
             mail.Click();
             mail.SendKeys(Guid.NewGuid() + "@onet.pl");
-
-            //var name = driver.FindElementById("author");
-            //name.Click();
-            //name.SendKeys("t");
-            //name.SendKeys("e");
-            //name.SendKeys("s");
-            //name.SendKeys("t");
 
             driver.Quit();
         }
