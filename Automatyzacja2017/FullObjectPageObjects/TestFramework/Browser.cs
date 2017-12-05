@@ -5,46 +5,46 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 
-namespace PageObjectTests.TestFramework
+namespace StaticPageObjectsWithExtensionMethod.TestFramework
 {
     internal class Browser
     {
-        private static IWebDriver driver;
+        private IWebDriver driver;
 
-        internal static IWebElement FindElementById(string id)
+        internal IWebElement FindElementById(string id)
         {
             return driver.FindElement(By.Id(id));
         }
 
-        internal static string PageSource => driver.PageSource;
+        internal  string PageSource => driver.PageSource;
 
-        internal static void WaitForInvisible(By by)
+        internal  void WaitForInvisible(By by)
         {
             new WebDriverWait(driver, TimeSpan.FromSeconds(10))
             .Until(ExpectedConditions.InvisibilityOfElementLocated(by));
         }
 
-        internal static ReadOnlyCollection<IWebElement> FindByXpath(string xpath)
+        internal  ReadOnlyCollection<IWebElement> FindByXpath(string xpath)
         {
             return driver.FindElements(By.XPath(xpath));
         }
 
-        internal static void NavigateTo(string url)
+        internal void NavigateTo(string url)
         {
             driver.Navigate().GoToUrl(url);
         }
 
-        internal static bool PageContains(string text)
+        internal bool PageContains(string text)
         {
             return driver.FindElements(By.XPath($"//*[contains(text(), '{text}')]")).Any();
         }
 
-        internal static void Close()
+        internal void Close()
         {
             driver.Quit();
         }
 
-        internal static void Initialize()
+        internal  Browser()
         {
             driver = new ChromeDriver();
             driver.Manage()

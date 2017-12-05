@@ -1,7 +1,7 @@
-﻿using PageObjectTests.Framework;
-using PageObjectTests.Framework.Domain;
-using Ploeh.AutoFixture.Xunit2;
+﻿using Ploeh.AutoFixture.Xunit2;
 using System;
+using PageObjectTests.Domain;
+using PageObjectTests.TestFramework;
 using Xunit;
 
 namespace PageObjectTests

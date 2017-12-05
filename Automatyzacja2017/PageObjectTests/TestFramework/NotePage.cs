@@ -1,7 +1,7 @@
-﻿using PageObjectTests.Framework.Domain;
-using System.Linq;
+﻿using System.Linq;
+using PageObjectTests.Domain;
 
-namespace PageObjectTests.Framework
+namespace PageObjectTests.TestFramework
 {
     internal class NotePage
     {

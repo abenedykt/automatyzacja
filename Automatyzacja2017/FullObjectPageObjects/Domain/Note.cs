@@ -1,4 +1,4 @@
-﻿namespace PageObjectTests.Domain
+﻿namespace StaticPageObjectsWithExtensionMethod.Domain
 {
     public class Note
     {
