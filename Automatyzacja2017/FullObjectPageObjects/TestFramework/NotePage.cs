@@ -1,6 +1,5 @@
 ﻿using System.Linq;
-using StaticPageObjectsWithExtensionMethod.Domain;
-using StaticPageObjectsWithExtensionMethod.TestFramework;
+using FullObjectPageObjects.Domain;
 
 namespace FullObjectPageObjects.TestFramework
 {

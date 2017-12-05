@@ -1,13 +1,13 @@
 ﻿using System;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using Xunit;
-using OpenQA.Selenium.Chrome;
-using System.Linq;
-using System.Collections.ObjectModel;
 
-namespace SeleniumTests
+namespace SeleniumIntroduction
 {
     public class SeleniumExample : IDisposable
     {

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2010
+VisualStudioVersion = 15.0.27130.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.UnitTests", "Automatyzacja2017\1.UnitTests.csproj", "{A8B996D5-3C17-4EFE-A7F8-F0C2736E430D}"
 EndProject
@@ -9,13 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.SeleniumIntrodution", "My
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PageObjects", "PageObjects", "{17A66019-44C5-466C-A5BA-49CB857ADC9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. SimpleStaticPageObjects", "PageObjectTests\1. SimpleStaticPageObjects.csproj", "{843B4858-7A43-45CB-B705-0A11F9625A25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.1. SimpleStaticPageObjects", "PageObjectTests\2.1. SimpleStaticPageObjects.csproj", "{843B4858-7A43-45CB-B705-0A11F9625A25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. StaticPageObjectsWithExtensionMethod", "StaticPageObjectsWithExtensionMethod\2. StaticPageObjectsWithExtensionMethod.csproj", "{5AAB7BCD-6CD2-4953-887F-D6AF7802C20E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.2. StaticPageObjectsWithExtensionMethod", "StaticPageObjectsWithExtensionMethod\2.2. StaticPageObjectsWithExtensionMethod.csproj", "{5AAB7BCD-6CD2-4953-887F-D6AF7802C20E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. FullObjectPageObjects", "FullObjectPageObjects\3. FullObjectPageObjects.csproj", "{6E57EEF8-8A96-426D-9C32-983CD2C3E32B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.3. FullObjectPageObjects", "FullObjectPageObjects\2.3. FullObjectPageObjects.csproj", "{6E57EEF8-8A96-426D-9C32-983CD2C3E32B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. FullObjectPageObjectWithAtributes", "FullObjectPageObjectWithAtributes\4. FullObjectPageObjectWithAtributes.csproj", "{9070BEB8-C21C-4119-B911-6647F896E05A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.4. FullObjectPageObjectWithAtributes", "FullObjectPageObjectWithAtributes\2.4. FullObjectPageObjectWithAtributes.csproj", "{9070BEB8-C21C-4119-B911-6647F896E05A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

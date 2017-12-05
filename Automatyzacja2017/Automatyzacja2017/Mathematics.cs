@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Automatyzacja2017
+namespace UnitTests
 {
     public class Mathematics
     {

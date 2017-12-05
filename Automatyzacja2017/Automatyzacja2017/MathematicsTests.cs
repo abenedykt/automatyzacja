@@ -1,7 +1,7 @@
 ﻿using System;
 using Xunit;
 
-namespace Automatyzacja2017
+namespace UnitTests
 {
     public class MathematicsTests
     {

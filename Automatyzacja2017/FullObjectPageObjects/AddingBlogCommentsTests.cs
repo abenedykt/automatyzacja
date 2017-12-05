@@ -1,8 +1,7 @@
 ﻿using System;
+using FullObjectPageObjects.Domain;
 using FullObjectPageObjects.TestFramework;
 using Ploeh.AutoFixture.Xunit2;
-using StaticPageObjectsWithExtensionMethod.Domain;
-using StaticPageObjectsWithExtensionMethod.TestFramework;
 using Xunit;
 
 namespace FullObjectPageObjects

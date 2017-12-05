@@ -1,4 +1,4 @@
-﻿namespace StaticPageObjectsWithExtensionMethod.Domain
+﻿namespace FullObjectPageObjects.Domain
 {
     public class Note
     {

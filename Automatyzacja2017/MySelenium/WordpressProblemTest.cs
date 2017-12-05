@@ -1,10 +1,10 @@
 ﻿using System;
-using OpenQA.Selenium.Chrome;
 using System.Threading;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using Xunit;
 
-namespace PageObjectTests
+namespace SeleniumIntroduction
 {
     public class DebuggingWordpresAndSeleniumProblems
     {
