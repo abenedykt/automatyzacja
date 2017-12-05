@@ -9,11 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.SeleniumIntrodution", "My
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PageObjects", "PageObjects", "{17A66019-44C5-466C-A5BA-49CB857ADC9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleStaticPageObjects", "PageObjectTests\SimpleStaticPageObjects.csproj", "{843B4858-7A43-45CB-B705-0A11F9625A25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. SimpleStaticPageObjects", "PageObjectTests\1. SimpleStaticPageObjects.csproj", "{843B4858-7A43-45CB-B705-0A11F9625A25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticPageObjectsWithExtensionMethod", "StaticPageObjectsWithExtensionMethod\StaticPageObjectsWithExtensionMethod.csproj", "{5AAB7BCD-6CD2-4953-887F-D6AF7802C20E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. StaticPageObjectsWithExtensionMethod", "StaticPageObjectsWithExtensionMethod\2. StaticPageObjectsWithExtensionMethod.csproj", "{5AAB7BCD-6CD2-4953-887F-D6AF7802C20E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullObjectPageObjects", "FullObjectPageObjects\FullObjectPageObjects.csproj", "{6E57EEF8-8A96-426D-9C32-983CD2C3E32B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. FullObjectPageObjects", "FullObjectPageObjects\3. FullObjectPageObjects.csproj", "{6E57EEF8-8A96-426D-9C32-983CD2C3E32B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. FullObjectPageObjectWithAtributes", "FullObjectPageObjectWithAtributes\4. FullObjectPageObjectWithAtributes.csproj", "{9070BEB8-C21C-4119-B911-6647F896E05A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{6E57EEF8-8A96-426D-9C32-983CD2C3E32B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E57EEF8-8A96-426D-9C32-983CD2C3E32B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E57EEF8-8A96-426D-9C32-983CD2C3E32B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9070BEB8-C21C-4119-B911-6647F896E05A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9070BEB8-C21C-4119-B911-6647F896E05A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9070BEB8-C21C-4119-B911-6647F896E05A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9070BEB8-C21C-4119-B911-6647F896E05A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +55,7 @@ Global
 		{843B4858-7A43-45CB-B705-0A11F9625A25} = {17A66019-44C5-466C-A5BA-49CB857ADC9F}
 		{5AAB7BCD-6CD2-4953-887F-D6AF7802C20E} = {17A66019-44C5-466C-A5BA-49CB857ADC9F}
 		{6E57EEF8-8A96-426D-9C32-983CD2C3E32B} = {17A66019-44C5-466C-A5BA-49CB857ADC9F}
+		{9070BEB8-C21C-4119-B911-6647F896E05A} = {17A66019-44C5-466C-A5BA-49CB857ADC9F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {50F19D69-C990-4D9F-8ACB-D11ABC9926D3}
